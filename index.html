@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planificador de Bodas - Tu Asistente de Bodas</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fas fa-heart"></i>
+            <span>Planificador de Bodas</span>
+        </div>
+        <div class="nav-links">
+            <a href="#inicio" class="active">Inicio</a>
+            <a href="#planificador">Planificador</a>
+            <a href="#presupuesto">Presupuesto</a>
+            <a href="#invitados">Invitados</a>
+            <a href="#proveedores">Proveedores</a>
+            <a href="#luna-miel">Luna de Miel</a>
+        </div>
+        <button class="menu-btn">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Planifica tu Boda Perfecta</h1>
+            <p>Organiza cada detalle de tu día especial con nuestra herramienta completa de planificación</p>
+            <button class="cta-button">Comenzar Planificación</button>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section id="planificador" class="timeline-section">
+        <h2>Timeline de tu Boda</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-icon">
+                    <i class="fas fa-calendar-alt"></i>
+                </div>
+                <div class="timeline-content">
+                    <h3>12 Meses Antes</h3>
+                    <ul>
+                        <li>Fijar fecha y presupuesto</li>
+                        <li>Elegir lugar de la ceremonia</li>
+                        <li>Contratar fotógrafo y video</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-icon">
+                    <i class="fas fa-ring"></i>
+                </div>
+                <div class="timeline-content">
+                    <h3>9 Meses Antes</h3>
+                    <ul>
+                        <li>Elegir vestido y traje</li>
+                        <li>Contratar catering</li>
+                        <li>Reservar música</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Más items del timeline -->
+        </div>
+    </section>
+
+    <!-- Presupuesto Section -->
+    <section id="presupuesto" class="budget-section">
+        <h2>Control de Presupuesto</h2>
+        <div class="budget-container">
+            <div class="budget-summary">
+                <div class="budget-card">
+                    <h3>Presupuesto Total</h3>
+                    <p class="amount">$<span id="total-budget">0</span></p>
+                </div>
+                <div class="budget-card">
+                    <h3>Gastado</h3>
+                    <p class="amount">$<span id="spent-amount">0</span></p>
+                </div>
+                <div class="budget-card">
+                    <h3>Restante</h3>
+                    <p class="amount">$<span id="remaining-amount">0</span></p>
+                </div>
+            </div>
+            <div class="budget-categories">
+                <!-- Las categorías se generarán dinámicamente con JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Invitados Section -->
+    <section id="invitados" class="guests-section">
+        <h2>Gestión de Invitados</h2>
+        <div class="guests-container">
+            <div class="guest-form">
+                <h3>Agregar Invitado</h3>
+                <form id="guest-form">
+                    <input type="text" placeholder="Nombre" required>
+                    <input type="email" placeholder="Email">
+                    <input type="tel" placeholder="Teléfono">
+                    <select required>
+                        <option value="">Tipo de Invitado</option>
+                        <option value="familia">Familia</option>
+                        <option value="amigos">Amigos</option>
+                        <option value="trabajo">Trabajo</option>
+                    </select>
+                    <button type="submit">Agregar</button>
+                </form>
+            </div>
+            <div class="guest-list">
+                <h3>Lista de Invitados</h3>
+                <div class="guest-search">
+                    <input type="text" placeholder="Buscar invitado...">
+                </div>
+                <div class="guests-table">
+                    <!-- La tabla se generará dinámicamente con JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proveedores Section -->
+    <section id="proveedores" class="vendors-section">
+        <h2>Proveedores</h2>
+        <div class="vendors-container">
+            <div class="vendor-categories">
+                <button class="vendor-category active" data-category="todos">Todos</button>
+                <button class="vendor-category" data-category="catering">Catering</button>
+                <button class="vendor-category" data-category="fotografia">Fotografía</button>
+                <button class="vendor-category" data-category="musica">Música</button>
+                <button class="vendor-category" data-category="decoracion">Decoración</button>
+            </div>
+            <div class="vendors-grid">
+                <!-- Los proveedores se generarán dinámicamente con JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Luna de Miel Section -->
+    <section id="luna-miel" class="honeymoon-section">
+        <h2>Planificación de Luna de Miel</h2>
+        <div class="honeymoon-container">
+            <div class="destination-search">
+                <h3>Buscar Destino</h3>
+                <div class="search-box">
+                    <input type="text" placeholder="¿A dónde quieres ir?">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+            <div class="popular-destinations">
+                <h3>Destinos Populares</h3>
+                <div class="upload-destination">
+                    <h4>Agregar Destino</h4>
+                    <form id="destination-form">
+                        <input type="text" placeholder="Nombre del destino" required>
+                        <input type="file" id="destination-image" accept="image/*" required>
+                        <button type="submit">Agregar</button>
+                    </form>
+                </div>
+                <div class="destinations-grid" id="destinations-grid">
+                    <!-- Los destinos se generarán dinámicamente con JavaScript -->
+                </div>
+            </div>
+        </div>
+        <!-- Agregar el botón para guardar sesión -->
+        <button id="save-session-btn" class="save-session-btn">
+            <i class="fas fa-save"></i> Guardar Sesión
+        </button>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Planificador de Bodas</h4>
+                <p>Tu asistente personal para planificar la boda perfecta</p>
+            </div>
+            <div class="footer-section">
+                <h4>Enlaces Rápidos</h4>
+                <a href="#inicio">Inicio</a>
+                <a href="#planificador">Planificador</a>
+                <a href="#presupuesto">Presupuesto</a>
+                <a href="#invitados">Invitados</a>
+            </div>
+            <div class="footer-section">
+                <h4>Contacto</h4>
+                <p><i class="fas fa-envelope"></i> info@weddingplanner.com</p>
+                <p><i class="fas fa-phone"></i> +1 234 567 890</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 WeddingPlanner. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+    <script>
+        document.getElementById('destination-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const destinationName = event.target.querySelector('input[type="text"]').value;
+            const destinationImage = event.target.querySelector('input[type="file"]').files[0];
+
+            if (destinationName && destinationImage) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    const destinationsGrid = document.getElementById('destinations-grid');
+                    const destinationCard = document.createElement('div');
+                    destinationCard.classList.add('destination-card');
+                    destinationCard.innerHTML = `
+                        <img src="${e.target.result}" alt="${destinationName}">
+                        <h4>${destinationName}</h4>
+                    `;
+                    destinationsGrid.appendChild(destinationCard);
+                };
+                reader.readAsDataURL(destinationImage);
+            }
+        });
+
+        document.getElementById('save-session-btn').addEventListener('click', function () {
+            alert('Sesión guardada exitosamente.');
+        });
+    </script>
+</body>
+</html>
